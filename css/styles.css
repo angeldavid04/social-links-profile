@@ -1,0 +1,167 @@
+:root {
+  /* COLORS */
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey700: hsl(0, 0%, 20%);
+  --grey800: hsl(0, 0%, 12%);
+  --grey900: hsl(0, 0%, 8%);
+  --indigo700: hsl(228, 45%, 44%);
+  /* TYPOGRAPHY */
+  --text-sm: 0.875rem;
+  --text-md: 1.5rem;
+  --fw-sm: 400;
+  --fw-md: 600;
+  --fw-lg: 700;
+  /* SPACING */
+  --space-sm: 0.5rem;
+  --space-md: 1.5rem;
+  --space-xl: 1.785rem;
+}
+
+/* ----- FONTS ----- */
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/static/Inter-Regular.ttf");
+  font-weight: var(--fw-sm);
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/static/Inter-SemiBold.ttf");
+  font-weight: var(--fw-md);
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/static/Inter-Bold.ttf");
+  font-weight: var(--fw-lg);
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ----- RESET ----- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+address {
+  font-style: normal;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--grey900);
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+}
+
+/* ----- CARD COMPONENT ----- */
+.card {
+  background-color: var(--grey800);
+  padding: 2.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 387px;
+  height: 100%;
+  max-height: fit-content;
+}
+
+.card__image {
+  width: 5.62rem;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: var(--space-xl);
+}
+
+.card__name {
+  font-weight: var(--fw-md);
+  font-size: var(--text-md);
+  margin-bottom: var(--space-sm);
+}
+
+.card__address {
+  color: var(--green);
+  font-weight: var(--fw-md);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.card__text {
+  font-size: var(--text-sm);
+}
+
+.card__link-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: var(--space-md);
+  gap: 1rem;
+  width: 100%;
+}
+
+.card__link {
+  display: block;
+  background-color: var(--grey700);
+  color: inherit;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  font-weight: var(--fw-md);
+  font-size: var(--text-sm);
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.card__link:hover,
+.card__link:focus-visible {
+  background-color: var(--green);
+  color: var(--grey900);
+}
+
+.attribution {
+  font-size: var(--text-sm);
+  text-align: center;
+  margin: 2rem;
+  text-wrap: pretty;
+}
+
+.attribution a {
+  color: var(--indigo700);
+}
+
+/* ----- MEDIA QUERIES ----- */
+@media (prefers-reduced-motion: reduce) {
+  .card__link {
+    transition: none;
+  }
+}
