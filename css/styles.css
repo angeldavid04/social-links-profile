@@ -5,7 +5,7 @@
   --grey700: hsl(0, 0%, 20%);
   --grey800: hsl(0, 0%, 12%);
   --grey900: hsl(0, 0%, 8%);
-  --indigo700: hsl(228, 45%, 44%);
+  --blue-500: hsl(216, 83%, 60%);
   /* TYPOGRAPHY */
   --text-sm: 0.875rem;
   --text-md: 1.5rem;
@@ -156,7 +156,7 @@ body {
 }
 
 .attribution a {
-  color: var(--indigo700);
+  color: var(--blue-500);
 }
 
 /* ----- MEDIA QUERIES ----- */
